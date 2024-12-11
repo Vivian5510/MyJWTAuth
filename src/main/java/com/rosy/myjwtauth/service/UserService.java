@@ -3,6 +3,8 @@ package com.rosy.myjwtauth.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rosy.myjwtauth.domain.entity.User;
 
+import java.util.List;
+
 /**
  * 用户表(User)表服务接口
  *
@@ -10,6 +12,6 @@ import com.rosy.myjwtauth.domain.entity.User;
  * @since 2024-12-09 15:21:20
  */
 public interface UserService extends IService<User> {
-
+    List<String> getPermissionsById(Long id);
 }
 

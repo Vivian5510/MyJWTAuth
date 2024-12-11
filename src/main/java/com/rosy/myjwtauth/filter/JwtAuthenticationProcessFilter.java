@@ -43,7 +43,6 @@ public class JwtAuthenticationProcessFilter extends OncePerRequestFilter {
                 UserDetailsImpl userDetails = BeanUtil.copyProperties(redisUtils.getCacheObject(redisKey), UserDetailsImpl.class);
 
                 // 将用户信息存入SecurityContextHolder
-                // TODO: 获取用户权限信息封装到Authentication中
                 if (userDetails != null) {
                     Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                     SecurityContextHolder.getContext().setAuthentication(authentication);
