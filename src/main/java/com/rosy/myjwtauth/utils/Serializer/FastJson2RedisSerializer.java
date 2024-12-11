@@ -31,3 +31,4 @@ public class FastJson2RedisSerializer implements RedisSerializer<Object> {
         return JSON.parseObject(jStr, Object.class);
     }
 }
+
